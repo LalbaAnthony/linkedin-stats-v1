@@ -1,4 +1,4 @@
-# linkedin-stats
+# linkedin-stats-v1
 
 A local Python 3.12+ command-line tool that analyses **who liked, commented on and reposted a LinkedIn company's posts** (a personal profile also works) within a given date range and exports a CSV ranking of the most active people (likes + comments + reposts).
 
@@ -188,7 +188,7 @@ python main.py --author "https://www.linkedin.com/in/some-author/" --start 2024-
 ## Project structure
 
 ```
-linkedin-stats/
+linkedin-stats-v1/
 ├── main.py                # CLI entry point + orchestration
 ├── requirements.txt
 ├── pyproject.toml         # Project metadata + semantic-release config

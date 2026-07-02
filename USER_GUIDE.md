@@ -1,4 +1,4 @@
-# linkedin-stats - User Guide
+# linkedin-stats-v1 - User Guide
 
 A friendly, step-by-step guide for **non-technical users**. By the end you'll be able to install the tool and produce a spreadsheet of the people who **liked, commented on and reposted** a LinkedIn company's posts.
 
@@ -76,32 +76,32 @@ You should see something like `Python 3.12.x` or `Python 3.13.x`. If you see an 
 
 The tool lives on GitHub at:
 
-**https://github.com/LalbaAnthony/linkedin-stats**
+**https://github.com/LalbaAnthony/linkedin-stats-v1**
 
 The simplest way to get it (no extra software needed) is to download it as a ZIP and unzip it:
 
 1. Open the page above in your web browser.
 2. Click the green **`<> Code`** button, then **Download ZIP**.
-3. Open your **Downloads** folder and find the file **`linkedin-stats-main.zip`**.
+3. Open your **Downloads** folder and find the file **`linkedin-stats-v1-main.zip`**.
 4. **Unzip it:** right-click the file, choose **Extract All...**, pick a location that's easy to find (for example your **Documents** folder), then click **Extract**.
-5. You now have a folder called **`linkedin-stats-main`**. Rename it to **`linkedin-stats`** (right-click it, choose **Rename**) so it matches the rest of this guide.
+5. You now have a folder called **`linkedin-stats-v1-main`**. Rename it to **`linkedin-stats-v1`** (right-click it, choose **Rename**) so it matches the rest of this guide.
 
 You should end up with a folder like:
-`C:\Users\YourName\Documents\linkedin-stats`
+`C:\Users\YourName\Documents\linkedin-stats-v1`
 
-Open it and check you can see files such as `main.py` and `README.md` **directly inside** (not hidden in a second sub-folder of the same name). If they sit one level deeper, move them up so they are directly inside your `linkedin-stats` folder.
+Open it and check you can see files such as `main.py` and `README.md` **directly inside** (not hidden in a second sub-folder of the same name). If they sit one level deeper, move them up so they are directly inside your `linkedin-stats-v1` folder.
 
-> **Mac:** double-click the downloaded `.zip` to unzip it, then rename the resulting `linkedin-stats-main` folder to `linkedin-stats`.
-> **Linux (Debian/Ubuntu):** unzip it from the file manager (right-click, Extract Here) or run `unzip linkedin-stats-main.zip`, then rename the folder to `linkedin-stats`.
+> **Mac:** double-click the downloaded `.zip` to unzip it, then rename the resulting `linkedin-stats-v1-main` folder to `linkedin-stats-v1`.
+> **Linux (Debian/Ubuntu):** unzip it from the file manager (right-click, Extract Here) or run `unzip linkedin-stats-v1-main.zip`, then rename the folder to `linkedin-stats-v1`.
 
 > **Already comfortable with Git?** Instead of the ZIP, you can run
-> `git clone https://github.com/LalbaAnthony/linkedin-stats.git`, which creates the `linkedin-stats` folder directly.
+> `git clone https://github.com/LalbaAnthony/linkedin-stats-v1.git`, which creates the `linkedin-stats-v1` folder directly.
 
 ## 6. Open a terminal inside the folder
 
 The "terminal" (also called PowerShell) is the blue/black window where you type commands.
 
-1. Open **File Explorer** and go **into** the `linkedin-stats` folder (you should see files like `main.py` and `README.md` inside).
+1. Open **File Explorer** and go **into** the `linkedin-stats-v1` folder (you should see files like `main.py` and `README.md` inside).
 2. Click once in the **address bar** at the top (where the folder path is shown).
 3. Type **`powershell`** and press **Enter**.
 
@@ -182,7 +182,7 @@ CSV generated: ...\output\results.csv
 The spreadsheet is created inside the project folder at:
 
 ```
-linkedin-stats\output\results.csv
+linkedin-stats-v1\output\results.csv
 ```
 
 Double-click it to open it in **Excel** (or Google Sheets). Accented names (é, à, …) display correctly. People are sorted from most likes to least.
@@ -216,9 +216,9 @@ You only need section **8c** again. Open PowerShell in the folder (section 6) an
 
 ## 13. Where things are (quick reference)
 
-- **The tool:** the `linkedin-stats` folder.
-- **Your report:** `linkedin-stats\output\results.csv`.
-- **Your saved login:** `linkedin-stats\sessions\linkedin.json` (delete this file if you want to force a fresh login).
+- **The tool:** the `linkedin-stats-v1` folder.
+- **Your report:** `linkedin-stats-v1\output\results.csv`.
+- **Your saved login:** `linkedin-stats-v1\sessions\linkedin.json` (delete this file if you want to force a fresh login).
 - **The command to make a report:** `.\.venv\Scripts\python.exe main.py --author "<address>" --start <YYYY-MM-DD> --end <YYYY-MM-DD>`
 
 If you get stuck, send a screenshot of the PowerShell window to the person who gave you the tool, the messages there usually explain what went wrong.

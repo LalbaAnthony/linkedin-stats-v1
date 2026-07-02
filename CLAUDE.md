@@ -1,4 +1,4 @@
-# CLAUDE.md — linkedin-stats
+# CLAUDE.md — linkedin-stats-v1
 
 Local CLI that scrapes who **liked, commented on and reposted** a LinkedIn
 **company's** posts (a personal profile also works) in a date range and exports a
