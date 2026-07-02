@@ -1,0 +1,25 @@
+# Persisted browser sessions (keep the directory, ignore the session files)
+sessions/*.json
+
+# Generated CSV exports (keep the directory, ignore the outputs)
+output/*.csv
+
+# Debug DOM dumps (--debug)
+output/*.html
+run.log
+
+# Environment file with local overrides
+.env
+
+# Python bytecode / caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Scratch / probe scripts at the repo root (e.g. _tmp_check.py). Anchored to
+# the root and excludes dunder files so package __init__.py is never ignored.
+/_[!_]*.py

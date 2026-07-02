@@ -1,0 +1,5 @@
+playwright>=1.44
+pandas>=2.0
+python-dotenv>=1.0
+# Dev / testing
+pytest>=8.0

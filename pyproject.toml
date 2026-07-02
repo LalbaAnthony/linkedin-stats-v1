@@ -1,0 +1,51 @@
+[project]
+name = "linkedin-stats"
+version = "0.1.0"
+description = "Local CLI that ranks who liked, commented on and reposted a LinkedIn company's (or profile's) posts in a date range."
+readme = "README.md"
+requires-python = ">=3.12"
+
+# -----------------------------------------------------------------------------
+# python-semantic-release (https://python-semantic-release.readthedocs.io)
+#
+# Versioning is fully automatic and driven by Conventional Commits on `main`:
+#   feat:            -> minor bump   (0.1.0 -> 0.2.0)
+#   fix: / perf:     -> patch bump   (0.1.0 -> 0.1.1)
+#   BREAKING CHANGE: -> minor while in 0.x (major_on_zero = false), else major
+#   docs/style/refactor/test/chore/ci/build -> no release
+# The GitHub Action in .github/workflows/release.yml computes the next version
+# from the commits since the last tag, updates the version below + the changelog,
+# commits, tags `vX.Y.Z` and publishes a GitHub Release. No manual step.
+# -----------------------------------------------------------------------------
+[tool.semantic_release]
+# Conventional Commits parser (feat/fix/BREAKING CHANGE -> semver bumps).
+commit_parser = "conventional"
+# The two places the version string is maintained; PSR rewrites both on release.
+version_toml = ["pyproject.toml:project.version"]
+version_variables = ["src/__init__.py:__version__"]
+# Git tag shape, e.g. v1.2.3 (matches the existing v0.1.0 tag).
+tag_format = "v{version}"
+# This is a local CLI app, not a distributable package: never build a wheel/sdist.
+build_command = ""
+# Release commit PSR pushes back to main. [skip ci] avoids re-triggering CI.
+commit_message = "chore(release): v{version} [skip ci]"
+# Permit staying on 0.x versions...
+allow_zero_version = true
+# ...and keep breaking changes as minor bumps while in 0.x (no surprise jump to
+# 1.0.0). Cut 1.0.0 deliberately by flipping this to true once the API is stable.
+major_on_zero = false
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = false
+
+[tool.semantic_release.changelog]
+# Keep PSR's own release commits out of the generated changelog.
+exclude_commit_patterns = ['''chore\(release\):.*''']
+
+[tool.semantic_release.remote]
+type = "github"
+
+[tool.semantic_release.publish]
+# Attach the changelog as the GitHub Release notes (no build artifacts to upload).
+upload_to_vcs_release = true
